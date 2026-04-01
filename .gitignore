@@ -1,0 +1,20 @@
+# datasets
+boss_base/
+dataset/
+dataset_exp/
+prepared_cover/
+
+# outputs
+output/
+output_exp/
+
+# keys
+keys/private_key.pem
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
