@@ -1,4 +1,4 @@
-# Hidden Digital Signature using Steganography and Neural Steganalysis
+# Method of hidden electronic signatures with robustness assessment of electronic documents using neural network steganalysis
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
