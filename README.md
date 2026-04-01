@@ -8,7 +8,7 @@
 
 ## Overview
 
-This project implements a method of hidden electronic signature embedding using LSB steganography and evaluates its robustness using a CNN-based steganalysis model.
+This project implements a method of hidden electronic signature embedding using LSB steganography and evaluates its robustness using a convolutional neural network (CNN)-based steganalysis model.
 
 The approach combines ECDSA digital signatures with steganographic embedding to ensure both authenticity and concealment of digital documents.
 
@@ -58,12 +58,12 @@ The approach combines ECDSA digital signatures with steganographic embedding to 
 
 ### Base Case (512-bit signature)
 - Accuracy: **50%**  
-- Detection: - Not detected  
+- Detection: Not detected  
 - PSNR: **76.28 dB**  
 
-### Increased Payload (*8)
+### Increased Payload (×8)
 - Accuracy: **100%**  
-- Detection: + Fully detected  
+- Detection: Fully detected  
 - PSNR: **67.47 dB**  
 
 **Conclusion:** Detection strongly depends on payload size  
@@ -73,11 +73,11 @@ The approach combines ECDSA digital signatures with steganographic embedding to 
 ## Visualization
 
 ### Base Case (512-bit payload)
-![Training](images/training_50.png)
+![Training](images/training_50.png)  
 ![Confusion Matrix](images/confusion_50.png)
 
 ### Increased Payload (*8)
-![Training](images/training_100.png)
+![Training](images/training_100.png)  
 ![Confusion Matrix](images/confusion_100.png)
 
 ---
@@ -85,38 +85,33 @@ The approach combines ECDSA digital signatures with steganographic embedding to 
 ## Project Structure
 
 ```bash
-hidden_ep/
+hidden-digital-signature-steganalysis/
 │
-├── dataset/              # Main dataset (512-bit payload)
-├── dataset_exp/          # Extended dataset (×8 payload)
-├── boss_base/            # Original images
-├── prepared_cover/       # Preprocessed images
-│
-├── keys/                 # ECDSA keys
-├── output/               # Base experiment results
-├── output_exp/           # Extended experiment results
-├── test_data/            # Sample files
-│
-├── dataset_generator.py
-├── train.py
-├── evaluate.py
-├── steganalysis_model.py
-│
-├── lsb_steganography.py
-├── signer.py
-├── verifier.py
-├── key_manager.py
+├── images/                 # Visualization results
+├── keys/                   # Public key only
+├── test_data/              # Sample files
 │
 ├── cli.py
+├── dataset_generator.py
+├── evaluate.py
+├── generate_exp_test.py
 ├── gui.py
+├── key_manager.py
+├── lsb_steganography.py
+├── signer.py
+├── steganalysis_model.py
+├── train.py
 ├── utils.py
+├── verifier.py
 │
+├── .gitignore
 └── README.md
 ```
-28 directories, 54047 files
+
 ---
 
 ## How to Run
+
 ```bash
 python dataset_generator.py
 python train.py
@@ -125,9 +120,19 @@ python evaluate.py
 
 ---
 
+## Repository Contents
+Source code of the system
+Sample input files (test_data)
+Visualization results (images)
+Public cryptographic key
+
+---
+
 ## Notes
-Large datasets and generated outputs are not included in the repository
-The project was developed for research and educational purposes
+Large datasets (BOSSbase, generated datasets) are not included due to size limitations
+Generated outputs are excluded from the repository
+
+---
 
 ## Author
 Sofiia Demianenko
