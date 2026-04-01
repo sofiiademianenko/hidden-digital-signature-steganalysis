@@ -66,21 +66,23 @@ The approach combines ECDSA digital signatures with steganographic embedding to 
 - Detection: + Fully detected  
 - PSNR: **67.47 dB**  
 
-➡️ **Conclusion:** Detection strongly depends on payload size  
+**Conclusion:** Detection strongly depends on payload size  
 
 ---
 
-## 📈 Visualization
+## Visualization
 
-### Model Training
-![Training](output_exp/training_history.png)
+### Base Case (512-bit payload)
+![Training](images/training_50.png)
+![Confusion Matrix](images/confusion_50.png)
 
-### Confusion Matrix
-![Confusion Matrix](output_exp/confusion_matrix.png)
+### Increased Payload (*8)
+![Training](images/training_100.png)
+![Confusion Matrix](images/confusion_100.png)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 hidden_ep/
